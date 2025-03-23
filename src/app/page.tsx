@@ -10,7 +10,7 @@ type ImageItems = {
 };
 
 //Generate a random Id for the image in string format
-const randomId = () => Math.floor(Math.random() * 123) + 1;
+const randomId = () => Math.floor(Math.random() * 155423) + 1;
 
 export default function Home() {
   const [images, setImages] = useState<ImageItems[]>([]);
@@ -31,18 +31,18 @@ export default function Home() {
   return (
     <div>
       <main>
-        <h1>
+        <h1 className="text-3xl font-bold underline">
           Hello Kevin
-          <button onClick={addNewFoxes}>Add New Images</button>
-          {
-            images.map(({ id, url }) => (
-              <div key={id} className="p-4">
-                <RandomFox image={url} />
+        </h1>          
+        <button onClick={addNewFoxes}>Add New Images</button>
+        {
+          images.map(({ id, url }) => (
+            <div key={id} className="p-4">
+              <RandomFox image={url} />
 
-              </div>
-            ))
-          }
-        </h1>
+            </div>
+          ))
+        }
       </main>
       <footer>
 
