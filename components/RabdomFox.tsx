@@ -2,14 +2,18 @@
 
 import type { FunctionComponent, FC, JSX } from "react"
 
+type Props = {
+    image: string
+}
+
 // 1. Forma implicita
 // export const RandomFox = () => {
 //     return <Image />
 // }
-const randomNumber = Math.floor(Math.random() * 123) + 1;
+// const randomNumber = Math.floor(Math.random() * 123) + 1;
 // 2. Forma explicita donde estamos tipando el retorno de la funcion
-export const RandomFox = (): JSX.Element => {
-    const image: string = `https://randomfox.ca/images/${randomNumber}.jpg`
+export const RandomFox = ({image}: Props): JSX.Element => {
+    // const image: string = `https://randomfox.ca/images/${randomNumber}.jpg`
     return <img width={320} height="auto" src={image} className=" rounded-2xl" />
 }
 
