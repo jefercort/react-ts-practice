@@ -13,7 +13,7 @@ type Props = {
 // }
 // const randomNumber = Math.floor(Math.random() * 123) + 1;
 // 2. Forma explicita donde estamos tipando el retorno de la funcion
-export const RandomFox = ({image}: Props): JSX.Element => {
+export const LazyImage = ({image}: Props): JSX.Element => {
     const [src, setSrc] = useState<string>(
         "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
     );
@@ -41,7 +41,13 @@ export const RandomFox = ({image}: Props): JSX.Element => {
 
 
     // const image: string = `https://randomfox.ca/images/${randomNumber}.jpg`
-    return <img ref={node} width={320} height="auto" src={image} className=" rounded-2xl bg-stone-500" />
+    return <img 
+            ref={node} 
+            width={320} 
+            height="auto" 
+            src={image} 
+            className=" rounded-2xl bg-stone-500"
+            />
 }
 
 // 3. Forma explicita usando FunctionComponent tipando directamente la constante
