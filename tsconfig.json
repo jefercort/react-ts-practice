@@ -13,6 +13,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    // se agregaron estos dos para especificar que no se use Any ni tampoco que se devuelva un valor implicito
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
     "plugins": [
       {
         "name": "next"
